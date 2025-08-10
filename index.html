@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="body.css" />
+</head>
+<body>
+  <div class="todo-container">
+    <h2>To-Do List</h2>
+    
+    <!-- Filters -->
+    <div class="filters">
+      <label for="filter-completed">Filter by status:</label>
+      <select id="filter-completed" title="Filter by completion status">
+        <option value="all">All</option>
+        <option value="true">Completed</option>
+        <option value="false">Pending</option>
+      </select>
+      
+      <label for="filter-priority">Filter by priority:</label>
+      <select id="filter-priority" title="Filter by priority">
+        <option value="all">All Priorities</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      
+      <label for="search-input">Search:</label>
+      <input type="text" id="search-input" placeholder="Search tasks..." title="Search tasks" />
+    </div>
+
+    <!-- Add Task Form -->
+    <form id="todo-form">
+      <label for="task-input">Task Title:</label>
+      <input type="text" id="task-input" placeholder="Enter a task..." required title="Task title" />
+      
+      <label for="description-input">Description:</label>
+      <input type="text" id="description-input" placeholder="Description (optional)" title="Task description" />
+      
+      <label for="priority-input">Priority:</label>
+      <select id="priority-input" title="Task priority">
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+        <option value="high">High</option>
+      </select>
+      
+      <label for="due-date-input">Due Date:</label>
+      <input type="date" id="due-date-input" title="Task due date" />
+      
+      <button type="submit">Add Task</button>
+    </form>
+
+    <!-- Loading indicator -->
+    <div id="loading" style="display: none;">Loading...</div>
+    
+    <!-- Todo List -->
+    <ul id="todo-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
