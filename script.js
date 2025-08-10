@@ -1,5 +1,5 @@
-// API Configuration
-const API_BASE_URL = 'http://localhost:5000/api/todos';
+// API Configuration - Updated for production backend
+const API_BASE_URL = 'https://todo-list-2c2k.onrender.com/api/todos';
 
 // DOM Elements
 const form = document.getElementById('todo-form');
